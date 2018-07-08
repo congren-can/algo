@@ -18,19 +18,18 @@ appear in the input unsorted array.
 """
 
 import numpy as np
-import copy as cp
 
 from bubble import bubblesort
 from merge import mergesort
 from heap import heapsort
 from quick import quicksort
 
-array = np.random.randint(100, size=15)
+array = np.random.randint(100, size=15).tolist()
 print('Input:\t{}\n'.format(array))
 
-bubblesort(cp.copy(array))
-heapsort(cp.copy(array))
-mergesort(cp.copy(array))
+bubblesort(array[:])
+heapsort(array[:])
+mergesort(array[:])
 
 #quicksort(cp.copy(array))
 #quicksort([9,5,2,6,1,11,3])
